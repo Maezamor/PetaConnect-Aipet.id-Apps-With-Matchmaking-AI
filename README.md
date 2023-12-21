@@ -8,11 +8,17 @@
 
 
 ## Description
+An Android-based application designed to solve the problem of stray dog overpopulation in Bali by connecting stray dogs with potential suitable owners.
+
+## Motto : 
+
+<p align="center">"Bersama PETA Connect, Mengubah Overpopulasi Menjadi Kesempatan Adopsi yang Menyenangkan."</p>
+
 ## Team PetaConnect
 
 | Name | Path | Bangkit ID | Sosial Media |
 | ------- | ------- | ------- | ------- |
-| Baris 1, Kolom 1 | Baris 1, Kolom 2 | Baris 1, Kolom 3 | Baris 1, Kolom 4 |
+| Wahyu Sahri Rhamadhan | Cloud Computing | Baris 1, Kolom 3 | Baris 1, Kolom 4 |
 | Baris 2, Kolom 1 | Baris 2, Kolom 2 | Baris 2, Kolom 3 | Baris 2, Kolom 4 |
 | Baris 3, Kolom 1 | Baris 3, Kolom 2 | Baris 3, Kolom 3 | Baris 3, Kolom 4 |
 
@@ -152,11 +158,57 @@ local
 in docker
 
 ```bash
-   'keyFilePath' => '['PATH YOUR CREDENTIAL.JSON']',
+   'keyFilePath' => '['/var/www/app/credensial.json']',
 ```
 
 
 **C. Cloud SQL**
 
 1. Go create Cloud SQL in google cloud you can follow and read  [Documentation](https://cloud.google.com/sql/docs/mysql)
+2. You can choose in public IP (Recomended) or Private IP
+3. Give access in your VM in Conection -> write your IP VM
+3. And go change in your .env your backend in CC/backend-Aipet-app/src
 
+```bash
+#seeting for coud sql
+DB_CONNECTION=mysql
+DB_HOST=['YOUR PUBLIC IP SQL']
+DB_PORT=3306
+DB_DATABASE=['YOUR DATABASE NAME']
+DB_USERNAME=['YOUR USER']
+DB_PASSWORD=['YOUR DB_PASSWORD]
+```
+
+
+## Running Dokcer in VM
+
+go your vm you with clone project in your local project, or you can clone in project repo
+
+**VM Requirement**
+
+* [Dokcer](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+* Docker-Compose
+
+```bash
+   sudo apt  install docker-compose
+```
+* git
+```bash
+   sudo apt install git
+```
+
+**Docker Installation**
+
+get root file there CC/backend-Aipet-app
+
+```bash
+   docker-compose up -d --build
+```
+get run your public ip your vm
+
+
+Enjoy :v
+
+
+## Mobile Documetation
+## ML Documentation
