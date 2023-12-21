@@ -188,7 +188,8 @@ DB_PASSWORD=['YOUR DB_PASSWORD]
 go your vm you with clone project in your local project, or you can clone in project repo
 
 **VM Requirement**
-
+* Laravel 10
+* PHP version 8.1
 * [Dokcer](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 * Docker-Compose
 
