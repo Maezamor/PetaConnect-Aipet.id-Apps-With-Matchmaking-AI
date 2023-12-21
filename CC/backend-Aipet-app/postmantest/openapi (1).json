@@ -1,0 +1,1905 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "TestAipetApi",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://{{url_local}}"
+    },
+    {
+      "url": "http://34.124.203.199:8001"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Type Testing"
+    },
+    {
+      "name": "Selter Testing"
+    },
+    {
+      "name": "Service Testing"
+    },
+    {
+      "name": "User Testing"
+    },
+    {
+      "name": "Dog Testing"
+    },
+    {
+      "name": "Sterilizatiom tester"
+    },
+    {
+      "name": "Personality"
+    },
+    {
+      "name": "Adoption Testing"
+    },
+    {
+      "name": "Onboarding1"
+    }
+  ],
+  "paths": {
+    "/api/admin/type/list": {
+      "get": {
+        "tags": [
+          "Type Testing"
+        ],
+        "summary": "Get Type",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "2"
+          },
+          {
+            "name": null,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/type/create": {
+      "post": {
+        "tags": [
+          "Type Testing"
+        ],
+        "summary": "Create Type",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "{{type}}"
+                  },
+                  "size": {
+                    "type": "string",
+                    "example": "large"
+                  },
+                  "activityLevel": {
+                    "type": "string",
+                    "example": "Moderate"
+                  },
+                  "groups": {
+                    "type": "string",
+                    "example": "Working Group"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/type": {
+      "put": {
+        "tags": [
+          "Type Testing"
+        ],
+        "summary": "Update",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "type": "bismuut",
+                  "size": "Large",
+                  "activityLevel": "moderate",
+                  "groups": "Toy Group"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "101"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Type Testing"
+        ],
+        "summary": "Delete Type",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "101"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/selter/list": {
+      "get": {
+        "tags": [
+          "Selter Testing"
+        ],
+        "summary": "Get Selter Testing",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/selter": {
+      "get": {
+        "tags": [
+          "Selter Testing"
+        ],
+        "summary": "Get Detail",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Selter Testing"
+        ],
+        "summary": "Update Selter Testing",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Jaki Selter"
+                  },
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "Bali, Ubud"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Kami adalah pencinta hewan, adopsi hewan pilihan ada disini!!"
+                  },
+                  "sosial_media_1": {
+                    "type": "string",
+                    "example": "facebook"
+                  },
+                  "sosial_media_2": {
+                    "type": "string",
+                    "example": "instagram"
+                  },
+                  "sosial_media_3": {
+                    "type": "string",
+                    "example": "aipet.id"
+                  },
+                  "phone": {
+                    "type": "integer",
+                    "example": "08329569"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "Ubud"
+                  },
+                  "lon": {
+                    "type": "number",
+                    "example": "-8.4960682"
+                  },
+                  "let": {
+                    "type": "number",
+                    "example": "115.2454399"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Selter Testing"
+        ],
+        "summary": "Delete",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "6"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/selter/create": {
+      "post": {
+        "tags": [
+          "Selter Testing"
+        ],
+        "summary": "create selter testing",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "{{selter_name}}"
+                  },
+                  "sosial_media_1": {
+                    "type": "string",
+                    "example": "{{sosial_media_1}}"
+                  },
+                  "sosial_media_2": {
+                    "type": "string",
+                    "example": "{{sosial_media_2}}"
+                  },
+                  "sosial_media_3": {
+                    "type": "string",
+                    "example": "{{sosial_media_3}}"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "{{deskripsi_service}}"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "{{city_service}}"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "{{address_service}}"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "example": "{{phone_service}}"
+                  },
+                  "lon": {
+                    "type": "string",
+                    "example": "{{lon}}"
+                  },
+                  "let": {
+                    "type": "string",
+                    "example": "{{let}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/service/list": {
+      "get": {
+        "tags": [
+          "Service Testing"
+        ],
+        "summary": "Get Service",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/service/detail": {
+      "get": {
+        "tags": [
+          "Service Testing"
+        ],
+        "summary": "Get Detail",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/service/create": {
+      "post": {
+        "tags": [
+          "Service Testing"
+        ],
+        "summary": "Create Service",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "{{name_service}}"
+                  },
+                  "sosial_media_1": {
+                    "type": "string",
+                    "example": "{{sosial_media_1}}"
+                  },
+                  "sosial_media_2": {
+                    "type": "string",
+                    "example": "{{sosial_media_2}}"
+                  },
+                  "sosial_media_3": {
+                    "type": "string",
+                    "example": "{{sosial_media_3}}"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "{{deskripsi_service}}"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "{{city_service}}"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "{{address_service}}"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "example": "{{phone}}"
+                  },
+                  "lon": {
+                    "type": "string",
+                    "example": "{{lon}}"
+                  },
+                  "let": {
+                    "type": "string",
+                    "example": "{{let}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/service": {
+      "post": {
+        "tags": [
+          "Service Testing"
+        ],
+        "summary": "Update",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Sableng Clinic"
+                  },
+                  "sosial_media_1": {
+                    "type": "string",
+                    "example": "Sableng_fb"
+                  },
+                  "sosial_media_2": {
+                    "type": "string",
+                    "example": "Sableng_ig"
+                  },
+                  "sosial_media_3": {
+                    "type": "string",
+                    "example": "Sableng_tiktok"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Melayani kebiri anjing dan masalah anjing lainya"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "Pasuruan"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "Bangil"
+                  },
+                  "phone": {
+                    "type": "integer",
+                    "example": "0837463746"
+                  },
+                  "lon": {
+                    "type": "number",
+                    "example": "-4.14214"
+                  },
+                  "let": {
+                    "type": "number",
+                    "example": "-5.12344"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "5"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/service/1": {
+      "delete": {
+        "tags": [
+          "Service Testing"
+        ],
+        "summary": "Delete",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "post": {
+        "tags": [
+          "User Testing"
+        ],
+        "summary": "Sign Up",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "example": "{{username}}"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "{{name}}"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "{{address}}"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "example": "{{phone}}"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "{{email}}"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "{{password}}"
+                  },
+                  "role_id": {
+                    "type": "string",
+                    "example": "{{role_id}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/users/login": {
+      "post": {
+        "tags": [
+          "User Testing"
+        ],
+        "summary": "Sign in",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "{{email}}"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "{{password}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/users/current": {
+      "get": {
+        "tags": [
+          "User Testing"
+        ],
+        "summary": "Get Current Users",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/users/current/update": {
+      "post": {
+        "tags": [
+          "User Testing"
+        ],
+        "summary": "Update Current Users",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "example": "sungokong"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Sunarto"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "kepulauan halmahera"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "sahrimulasako@gmail.com"
+                  },
+                  "phone": {
+                    "type": "integer",
+                    "example": "083872578"
+                  },
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/users/logout": {
+      "delete": {
+        "tags": [
+          "User Testing"
+        ],
+        "summary": "Logout",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/dogs/create": {
+      "post": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "create_dog",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "{{dog_name}}"
+                  },
+                  "age": {
+                    "type": "string",
+                    "example": "{{age}}"
+                  },
+                  "rescue_story": {
+                    "type": "string",
+                    "example": "{{rescue_strory}}"
+                  },
+                  "character": {
+                    "type": "string",
+                    "example": "{{character}}"
+                  },
+                  "type_id": {
+                    "type": "string",
+                    "example": "{{type_id}}"
+                  },
+                  "steril_id": {
+                    "type": "string",
+                    "example": "{{steril_id}}"
+                  },
+                  "selter_id": {
+                    "type": "string",
+                    "example": "{{selter_id}}"
+                  },
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "gender": {
+                    "type": "string",
+                    "example": "Male"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/dogs": {
+      "get": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "get Detail Dog",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1584"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "UpdateDog",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Joko"
+                  },
+                  "age": {
+                    "type": "integer",
+                    "example": "1"
+                  },
+                  "rescue_story": {
+                    "type": "string",
+                    "example": "manusia malang"
+                  },
+                  "character": {
+                    "type": "string",
+                    "example": "periang baik"
+                  },
+                  "picture": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "type_id": {
+                    "type": "integer",
+                    "example": "1"
+                  },
+                  "gender": {
+                    "type": "string",
+                    "example": "Female"
+                  },
+                  "steril_id": {
+                    "type": "integer",
+                    "example": "1"
+                  },
+                  "selter_id": {
+                    "type": "integer",
+                    "example": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1585"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "Delete",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1585"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/dogs/search": {
+      "post": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "seacrh engine",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "example": "non-sporting"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/dogs/filter": {
+      "get": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "Get Dog With filterTesting",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/dogs/rescue": {
+      "get": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "get rescue",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/end": {
+      "get": {
+        "tags": [
+          "Dog Testing"
+        ],
+        "summary": "Onborading End",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/sterils/list": {
+      "get": {
+        "tags": [
+          "Sterilizatiom tester"
+        ],
+        "summary": "get list",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/sterils/create": {
+      "post": {
+        "tags": [
+          "Sterilizatiom tester"
+        ],
+        "summary": "Created",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "{{name_steril}}"
+                  },
+                  "kelompok": {
+                    "type": "string",
+                    "example": "{{kelompok}}"
+                  },
+                  "group": {
+                    "type": "string",
+                    "example": "{{group}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/sterils": {
+      "put": {
+        "tags": [
+          "Sterilizatiom tester"
+        ],
+        "summary": "Update",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "name": "Neutered"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sterilizatiom tester"
+        ],
+        "summary": "Delete",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "5"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/person/list": {
+      "get": {
+        "tags": [
+          "Personality"
+        ],
+        "summary": "get",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/person/7": {
+      "get": {
+        "tags": [
+          "Personality"
+        ],
+        "summary": "detail",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/person/create": {
+      "post": {
+        "tags": [
+          "Personality"
+        ],
+        "summary": "Create",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string",
+                    "example": "apa penilaian kamu tentang anjing?"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/person/update/1": {
+      "delete": {
+        "tags": [
+          "Personality"
+        ],
+        "summary": "Update",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/person/delete/4": {
+      "delete": {
+        "tags": [
+          "Personality"
+        ],
+        "summary": "delete",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/adoption/get": {
+      "get": {
+        "tags": [
+          "Adoption Testing"
+        ],
+        "summary": "get Adoption",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "52"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/adoption/create": {
+      "get": {
+        "tags": [
+          "Adoption Testing"
+        ],
+        "summary": "checkOut",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          },
+          {
+            "name": "dog_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/1/start": {
+      "post": {
+        "tags": [
+          "Onboarding1"
+        ],
+        "summary": "Add Onboarding 1",
+        "requestBody": {
+          "content": {}
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/2/start": {
+      "post": {
+        "tags": [
+          "Onboarding1"
+        ],
+        "summary": "Add Onboarding 2",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "rescueStory1": {
+                    "type": "string",
+                    "example": "hallo"
+                  },
+                  "rescueStory2": {
+                    "type": "string",
+                    "example": "manusia"
+                  },
+                  "rescueStory3": {
+                    "type": "string",
+                    "example": "kecil"
+                  },
+                  "requestStory": {
+                    "type": "string",
+                    "example": "dunia"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/filter": {
+      "get": {
+        "tags": [
+          "Onboarding1"
+        ],
+        "summary": "getOnboardingFilter",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/result": {
+      "get": {
+        "tags": [
+          "Onboarding1"
+        ],
+        "summary": "Onboarding Result",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{auth}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
