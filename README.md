@@ -18,8 +18,7 @@ An Android-based application designed to solve the problem of stray dog overpopu
 
 | Name | Path | Bangkit ID | Sosial Media |
 | ------- | ------- | ------- | ------- |
-| Wahyu Sahri Rhamadhan | Cloud Computing | C525BSY3282 | [Linkedin](https://www.linkedin.com/in/wahyu-sahri-rhamadhan/)
- |
+| Wahyu Sahri Rhamadhan | Cloud Computing | C525BSY3282 | [Linkedin](https://www.linkedin.com/in/wahyu-sahri-rhamadhan/) |
 | Kesya Nursyahada | Machine Learning | M296BSX1003  | Baris 2, Kolom 4 |
 | Anya Ningrum Nur’afifah | Machine Learning | M296BSX1008  | Baris 3, Kolom 4 |
 | Darmawan Kristiaji | Machine Learning | M318BSY0867 | Baris 3, Kolom 4 |
