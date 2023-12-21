@@ -44,4 +44,119 @@ Program tools :
 ![MySQL](https://img.shields.io/badge/--%20MYSQL?style=flat&logo=Mysql&label=MYSQL&labelColor=white&color=blue)&nbsp;
 ![Postman](https://img.shields.io/badge/postman-11?style=flat&logo=postman&color=black)&nbsp;
 ![Dokcer](https://img.shields.io/badge/docker-11?style=flat&logo=docker&labelColor=black&color=blue)&nbsp;
+![Static Badge](https://img.shields.io/badge/kotlin-102?style=flat&logo=kotlin&labelColor=black&color=blue)
+
+![Static Badge](https://img.shields.io/badge/python-1?style=flat&logo=python&labelColor=yellow&color=blue)
+
+
+## Infrastructur
+
+
+![infrastuctur](https://raw.githubusercontent.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/main/image/infrastuctur-desin-spesification.jpg)
+
+
+## Cloud Computing Documentation
+
+
+## A. Installation
+
+### # in Local Meachine Server/ backend
+
+
+
+
+
+
+clone project
+
+```bash
+  git clone https://github.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI.git
+```
+
+Go to the project directory
+
+```bash
+  cd CC/backend-Aipet-app/src
+```
+
+upgrade Composer
+
+```bash
+  composer update
+```
+
+CP .env.example to .env
+
+```bash
+  cp .env.example .env
+```
+
+key generate Laravel
+
+```bash
+  php artisan:key generate
+```
+
+go test sever
+
+```bash
+  php artisan serve
+
+```
+
+Open link server
+
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### finaly picture
+if you success install your local
+
+![Logo](https://raw.githubusercontent.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/main/image/server.jpg)
+
+
+
+
+## Deployment in Google Cloud
+
+
+### Making Infrastructur
+
+**A. Virtual Machine**
+
+you can follow my spesification
+
+![Logo](https://raw.githubusercontent.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/main/image/sepecification-vm.png)
+
+### or
+
+Creating a virtual machine in Google Cloud, make sure to select the same zone as the other instance to use to store the instance, or you can visit [Documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) link provided by Google for instance creation.
+
+
+
+**B. Bucket Storage**
+
+1. Create Bucket Storage in Google CLoud, you can follow  [Documentation](https://cloud.google.com/storage/docs/creating-buckets) link provided by Google 
+
+2. Go to IAM Google Cloud, you can follow [Role IAM](https://cloud.google.com/storage/docs/access-control/iam-roless)
+3. Getting App key and go to file CC/backend-Aipet-app/src click credential.json, copy paste in there with you credential
+4. Go change with your bucket name in your file, go CC\backend-Aipet-app\src\app\Http\Controllers\GoogleCloudStorageController.php
+
+```bash
+  private $bucket = '['YOUR BUCKET NAME']';
+```
+local
+
+```bash
+   'keyFilePath' => '['PATH YOUR CREDENTIAL.JSON']',
+```
+in docker
+
+```bash
+   'keyFilePath' => '['PATH YOUR CREDENTIAL.JSON']',
+```
+
+
+**C. Cloud SQL**
+
+1. Go create Cloud SQL in google cloud you can follow and read  [Documentation](https://cloud.google.com/sql/docs/mysql)
 
