@@ -22,7 +22,7 @@ An Android-based application designed to solve the problem of stray dog overpopu
 | Kesya Nursyahada | Machine Learning | M296BSX1003  | Baris 2, Kolom 4 |
 | Anya Ningrum Nur’afifah | Machine Learning | M296BSX1008  | Baris 3, Kolom 4 |
 | Darmawan Kristiaji | Machine Learning | M318BSY0867 | Baris 3, Kolom 4 |
-| Ilham Gusti Syah Putro | Mobile Developer | A129BSY2465 | Baris 3, Kolom 4 |
+| Ilham Gusti Syah Putro | Mobile Developer | A129BSY2465 | [Linkedin](https://www.linkedin.com/in/ilham-gusti-syah-putro/) |
 | Muhammad Ahsanur Rafi | Cloud Computing | C296BSY4312 | Baris 3, Kolom 4 |
 
 
