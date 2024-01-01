@@ -231,5 +231,5 @@ UI prototype design for this application:
 * [Figma Aipet.id](https://www.figma.com/file/hF5qU0rBsIXhP6aUpwtCed/Aipet.id?type=design&node-id=0%3A1&mode=design&t=8fQxMERFedmre8Xz-1)
 
 Source code of app :
-* [Source code aipet.di](https://github.com/Maezamor/aipet-mobile-app.git)
+* [Source code aipet.id](https://github.com/Maezamor/aipet-mobile-app.git)
 ## ML Documentation
