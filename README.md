@@ -229,6 +229,7 @@ some views of the android application :
 | ![Gambar 7](https://github.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/assets/93174860/84659d09-21f9-433d-9170-c4f37d3f7505) | ![Gambar 8](https://github.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/assets/93174860/12d43fc4-0184-445d-85a0-0512df9ef174) | ![Gambar 9](https://github.com/Maezamor/PetaConnect-Aipet.id-Apps-With-Matchmaking-AI/assets/93174860/cc696a14-4361-4137-925c-36c4a8d08dc7) |
 UI prototype design for this application:
 * [Figma Aipet.id](https://www.figma.com/file/hF5qU0rBsIXhP6aUpwtCed/Aipet.id?type=design&node-id=0%3A1&mode=design&t=8fQxMERFedmre8Xz-1)
+
 Source code of app :
 * [Source code aipet.di](https://github.com/Maezamor/aipet-mobile-app.git)
 ## ML Documentation
